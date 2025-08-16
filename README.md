@@ -12,10 +12,9 @@ API Rest para registro e login de usuários, com autenticação via Bearer Token
 
 1. Clone o repositório ou copie os arquivos para sua máquina.
 2. Instale as dependências:
-   ```
+  ```
 npm install express jsonwebtoken swagger-ui-express
-   ```
-
+  ```
 ## Como rodar
 
 - Para iniciar o servidor:
