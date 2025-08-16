@@ -5,6 +5,7 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -14,8 +15,8 @@ jobs:
       - name: Checkout do código
         uses: actions/checkout@v4
 
-      - name: Instalar dependências
+      - name: Instalação das dependências
         run: npm install
 
-      - name: Executar testes
+      - name: Execução dos testes
         run: npm test

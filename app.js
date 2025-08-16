@@ -15,7 +15,6 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.post('/register', registerUser);
 app.post('/login', loginUser);
 
-
 // Protected profile route
 app.get('/profile', authenticateToken, getProfile);
 
