@@ -1,0 +1,22 @@
+{
+  "name": "api-de-login",
+  "version": "1.0.0",
+  "description": "API Rest para registro e login de usuários, com autenticação via Bearer Token (JWT). Utiliza banco de dados em memória (variáveis) e é ideal para aprendizado de testes e automação de APIs.",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha test/**/*.test.js --timeout 10000",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "4.5",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mocha": "^11.7.1",
+    "sinon": "^21.0.0",
+    "supertest": "^7.1.4",
+    "swagger-ui-express": "^5.0.1"
+  }
+}
