@@ -18,7 +18,6 @@ function loginUser(req, res) {
   res.json({ token: result.token });
 }
 
-
 function getProfile(req, res) {
   const result = authService.getUserProfile(req.user.username);
   if (result.error) {

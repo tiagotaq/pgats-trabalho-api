@@ -25,7 +25,6 @@ function login(username, password) {
   return { token };
 }
 
-
 function getUserProfile(username) {
   const user = findUserByUsername(username);
   if (!user) {

@@ -17,7 +17,7 @@ describe('Auth Controller', () => {
             authServiceMock = sinon.stub(authService, 'register');
         })
         it('Quando não informo o usuário e a senha, recebo um 400 e exibo a mensagem de erro', async () => {
-            objetoDeErro = { error: 'Username and password are required.' }
+            const objetoDeErro = { error: 'Username and password are required.' }
             authServiceMock.returns(objetoDeErro);
 
             const resposta = await request(app)
@@ -30,7 +30,7 @@ describe('Auth Controller', () => {
             expect(resposta.body).to.deep.equal(objetoDeErro)
         })
         it('Quando informo um usuário e senha, recebo um 201 e exibo a mensagem de sucesso', async () => {
-            objetoDeSucesso = { message: 'User registered successfully.' }
+            const objetoDeSucesso = { message: 'User registered successfully.' }
             authServiceMock.returns(objetoDeSucesso);
 
             const resposta = await request(app)
@@ -48,7 +48,7 @@ describe('Auth Controller', () => {
             authServiceMock = sinon.stub(authService, 'login');
         })
         it('Quando informo um usuário e senha inválidos, recebo um 400 e exibo a mensagem de erro', async () => {
-            objetoDeErro = { error: 'Invalid username or password.' };
+            const objetoDeErro = { error: 'Invalid username or password.' };
             authServiceMock.returns(objetoDeErro);
 
             const resposta = await request(app)
@@ -61,7 +61,7 @@ describe('Auth Controller', () => {
             expect(resposta.body).to.deep.equal(objetoDeErro)
         })
         it('Quando informo um usuário e senha válidos, recebo o token', async () => {
-            objetoDeSucesso = { token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRpYWdvIiwiaWF0IjoxNzU1MTA4Nzc2LCJleHAiOjE3NTUxMTIzNzZ9.03OAagyvhXtv11Fzut_wumLR6oBf300ZROW-EfRUbK4' }
+            const objetoDeSucesso = { token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRpYWdvIiwiaWF0IjoxNzU1MTA4Nzc2LCJleHAiOjE3NTUxMTIzNzZ9.03OAagyvhXtv11Fzut_wumLR6oBf300ZROW-EfRUbK4' }
             authServiceMock.returns(objetoDeSucesso);
 
             const resposta = await request(app)
